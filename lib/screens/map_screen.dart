@@ -38,7 +38,7 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     final center = _position != null
         ? LatLng(_position!.latitude, _position!.longitude)
-        : const LatLng(19.0760, 72.8777); // Mumbai default
+        : const LatLng(19.0760, 72.8777);
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -149,7 +149,6 @@ class _MapScreenState extends State<MapScreen> {
             ],
           ),
 
-          // Map controls
           Positioned(
             right: 12,
             bottom: 100,
@@ -172,7 +171,6 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
 
-          // My location button
           Positioned(
             right: 12,
             bottom: 40,
@@ -183,7 +181,6 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
 
-          // Location info card
           Positioned(
             bottom: 0,
             left: 0,

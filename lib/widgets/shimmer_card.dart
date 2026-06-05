@@ -1,4 +1,3 @@
-// lib/widgets/shimmer_card.dart
 
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
@@ -19,7 +18,6 @@ class ShimmerCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Image placeholder
               Container(
                 height: 180,
                 width: double.infinity,
@@ -29,7 +27,6 @@ class ShimmerCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 12),
-              // Category tag
               Container(
                 height: 18,
                 width: 80,
@@ -39,7 +36,6 @@ class ShimmerCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 8),
-              // Title
               Container(
                 height: 20,
                 width: double.infinity,
@@ -58,7 +54,6 @@ class ShimmerCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              // Description lines
               Container(
                 height: 14,
                 width: double.infinity,
@@ -77,7 +72,6 @@ class ShimmerCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 12),
-              // Price row
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

@@ -1,4 +1,3 @@
-// lib/widgets/error_view.dart
 
 import 'package:flutter/material.dart';
 
@@ -68,7 +67,6 @@ class ErrorView extends StatelessWidget {
   }
 }
 
-/// Small inline error banner for pagination failures
 class InlineErrorBanner extends StatelessWidget {
   final String message;
   final VoidCallback onRetry;

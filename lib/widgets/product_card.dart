@@ -1,4 +1,3 @@
-// lib/widgets/product_card.dart
 
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -23,7 +22,6 @@ class ProductCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // ── Hero image ──────────────────────────────────────
           ClipRRect(
             borderRadius:
                 const BorderRadius.vertical(top: Radius.circular(16)),
@@ -53,7 +51,6 @@ class ProductCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // ── Category + rating row ─────────────────────
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -63,7 +60,6 @@ class ProductCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
 
-                // ── Title ─────────────────────────────────────
                 Text(
                   product.title,
                   style: theme.textTheme.titleMedium
@@ -73,7 +69,6 @@ class ProductCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
 
-                // ── Brand ─────────────────────────────────────
                 Text(
                   'by ${product.brand}',
                   style: theme.textTheme.bodySmall
@@ -81,7 +76,6 @@ class ProductCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
 
-                // ── Description ───────────────────────────────
                 Text(
                   product.description,
                   style: theme.textTheme.bodySmall
@@ -91,7 +85,6 @@ class ProductCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 14),
 
-                // ── Price + CTA row ───────────────────────────
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -152,7 +145,6 @@ class ProductCard extends StatelessWidget {
                   ],
                 ),
 
-                // ── Stock indicator ───────────────────────────
                 const SizedBox(height: 10),
                 Row(
                   children: [

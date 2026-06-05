@@ -64,7 +64,6 @@ class _HomeScreenState extends State<HomeScreen>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Hamburger menu
           GestureDetector(
             onTap: () {
               Navigator.push(
@@ -77,7 +76,6 @@ class _HomeScreenState extends State<HomeScreen>
             child: const Icon(Icons.menu, size: 24, color: Color(0xFF1A1A1A)),
           ),
 
-          // BharatNova logo
           RichText(
             text: const TextSpan(
               style: TextStyle(
@@ -107,7 +105,6 @@ class _HomeScreenState extends State<HomeScreen>
             ),
           ),
 
-          // Location chip
           GestureDetector(
             onTap: () => Navigator.push(
               context,
@@ -181,13 +178,11 @@ class _HomeScreenState extends State<HomeScreen>
     return TabBarView(
       controller: _tabController,
       children: [
-        // Post tab
         ListView.builder(
           padding: EdgeInsets.zero,
           itemCount: _posts.length,
           itemBuilder: (ctx, i) => PostCard(post: _posts[i]),
         ),
-        // Other tabs
         ..._tabs
             .skip(1)
             .map(
@@ -231,7 +226,6 @@ class _HomeScreenState extends State<HomeScreen>
       ),
       child: Row(
         children: List.generate(items.length, (i) {
-          // Skip center (FAB spot)
           if (i == 2) return const Spacer();
           final isActive = _bottomNavIndex == i;
           return Expanded(
