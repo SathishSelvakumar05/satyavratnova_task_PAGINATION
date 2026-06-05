@@ -1,12 +1,30 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:satyavratnova_task2/screens/splash_screen.dart';
 import 'bloc/feed_cubit.dart';
 import 'repository/product_repository.dart';
 import 'screens/feed_screen.dart';
-
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider<ProductRepository>(
+          create: (_) => ProductRepository(),
+        ),
+      ],
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider<FeedCubit>(
+            create: (context) => FeedCubit(
+              repository: context.read<ProductRepository>(),
+            ),
+          ),
+        ],
+        child: const MyApp(),
+      ),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,35 +33,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Product Feed',
+      title: 'BharatNova',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6C63FF),
+          seedColor: const Color(0xFF2B3A8C),
           brightness: Brightness.light,
         ),
-        cardTheme: const CardThemeData(
-          elevation: 2,
-          shadowColor: Colors.black12,
+        fontFamily: 'sans-serif',
+        scaffoldBackgroundColor: const Color(0xFFF5F6F7),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          surfaceTintColor: Colors.transparent,
         ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white,
-            backgroundColor: const Color(0xFF6C63FF),
-          ),
-        ),
-        fontFamily: 'Roboto',
+        useMaterial3: true,
       ),
-      home: RepositoryProvider(
-        create: (_) => ProductRepository(),
-        child: BlocProvider(
-          create: (ctx) => FeedCubit(
-            repository: ctx.read<ProductRepository>(),
-          ),
-          child: const FeedScreen(),
-        ),
-      ),
+      home: const SplashScreen(),
     );
   }
 }
