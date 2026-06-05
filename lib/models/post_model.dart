@@ -45,9 +45,9 @@ List<PostModel> getDummyPosts() {
       content:
       'Hyderabad: Telangana Chief Minister, A. Revanth Reddy, on Thursday said that delimitation is going to be a limitation for the South...\n\nHe also alleged that the Centre was conspiring against South Indian states in the name of delimitation.\n\nHe said the Congress party has in principle decided to attend the meeting of political parties called by Tamil Nadu Chief Minister and DMK leader MK Stalin in Chennai on March 22 to discuss the impact of the proposed delimitation on the Southern states.\n\nRevanth Reddy, who is one of the seven chief ministers invited by CM Stalin for the meeting, said he would attend the meeting after taking permission from the Congress high comm...',
       images: [
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Revanth_Reddy%2C_MP%2C_Malkajgiri.jpg/320px-Revanth_Reddy%2C_MP%2C_Malkajgiri.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Revanth_Reddy%2C_MP%2C_Malkajgiri.jpg/320px-Revanth_Reddy%2C_MP%2C_Malkajgiri.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Revanth_Reddy%2C_MP%2C_Malkajgiri.jpg/320px-Revanth_Reddy%2C_MP%2C_Malkajgiri.jpg',
+        'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800',
+        'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800',
+        'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800',
       ],
       postedAt: DateTime.now().subtract(const Duration(days: 1)),
       likes: 228,

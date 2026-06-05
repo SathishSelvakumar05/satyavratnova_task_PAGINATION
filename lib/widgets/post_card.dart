@@ -24,6 +24,7 @@ class _PostCardState extends State<PostCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Repost banner
           if (widget.post.isRepost) _buildRepostBanner(),
 
           Padding(
@@ -74,31 +75,22 @@ class _PostCardState extends State<PostCard> {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // Avatar
         CircleAvatar(
           radius: 20,
-          backgroundColor: const Color(0xFFE0E0E0),
-          child: CachedNetworkImage(
-            imageUrl:
-            widget.post.images.isNotEmpty ? widget.post.images[0] : '',
-            imageBuilder: (ctx, img) => CircleAvatar(
-              radius: 20,
-              backgroundImage: img,
-            ),
-            errorWidget: (ctx, url, err) => CircleAvatar(
-              radius: 20,
-              backgroundColor: const Color(0xFF2B3A8C),
-              child: Text(
-                widget.post.authorName[0].toUpperCase(),
-                style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16),
-              ),
+          backgroundColor: const Color(0xFF2B3A8C),
+          child: Text(
+            widget.post.authorName[0].toUpperCase(),
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
             ),
           ),
         ),
         const SizedBox(width: 10),
 
+        // Name + handle + location
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -156,6 +148,7 @@ class _PostCardState extends State<PostCard> {
           ),
         ),
 
+        // Time + menu
         Row(
           children: [
             Text(
@@ -234,6 +227,7 @@ class _PostCardState extends State<PostCard> {
             ),
           ),
 
+          // Image counter badge
           if (images.length > 1)
             Positioned(
               top: 10,
@@ -256,6 +250,7 @@ class _PostCardState extends State<PostCard> {
               ),
             ),
 
+          // Dot indicators
           if (images.length > 1)
             Positioned(
               bottom: 8,
