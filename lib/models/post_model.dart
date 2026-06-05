@@ -67,8 +67,8 @@ List<PostModel> getDummyPosts() {
       content:
       'Having presided over the BJP\'s thumping victory in the Madhya Pradesh Assembly polls.',
       images: [
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Shivraj_Singh_Chouhan_%28cropped%29.jpg/320px-Shivraj_Singh_Chouhan_%28cropped%29.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Shivraj_Singh_Chouhan_%28cropped%29.jpg/320px-Shivraj_Singh_Chouhan_%28cropped%29.jpg',
+        'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800',
+        'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800',
       ],
       postedAt: DateTime(2024, 1, 10),
       likes: 412,
@@ -102,7 +102,7 @@ List<PostModel> getDummyPosts() {
       content:
       'Delhi\'s mohalla clinics have been a revolution in healthcare. Today, we inaugurated 10 more clinics in East Delhi. Free medicines, free tests — healthcare is a right, not a privilege. 🏥',
       images: [
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Arvind_Kejriwal_-_Flickr_-_Al_Jazeera_English_%281%29_%28cropped%29.jpg/320px-Arvind_Kejriwal_-_Flickr_-_Al_Jazeera_English_%281%29_%28cropped%29.jpg',
+        'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800',
       ],
       postedAt: DateTime.now().subtract(const Duration(hours: 6)),
       likes: 3241,
